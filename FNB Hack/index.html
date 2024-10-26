@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge - Connect Skills & Opportunities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Welcome/Login Page -->
+    <div class="welcome-container" id="welcomePage">
+        <div class="auth-container">
+            <h2>Welcome to SkillBridge</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn btn-accent">Login</button>
+                <button type="button" class="btn" onclick="showSignupForm()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp" style="display: none;">
+        <nav class="navbar">
+            <h1>FNB SkillBridge</h1>
+            <div class="nav-links">
+                <button class="btn btn-accent" onclick="showSection('courses')">Courses</button>
+                <button class="btn btn-accent" onclick="showSection('opportunities')">Opportunities</button>
+                <button class="btn btn-accent" onclick="showSection('resources')">Resources</button>
+                <button class="btn btn-accent" onclick="showSection('community')">Community</button>
+                <button class="btn" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- Skills Development Section -->
+            <div class="card" id="coursesSection">
+                <h2>Skills Development Courses</h2>
+                <div class="course-list">
+                    <div class="course-item">
+                        <h3>Financial Management</h3>
+                        <p>Master financial planning, analysis, and strategy</p>
+                        <span class="tag">40 hours</span>
+                        <button class="btn btn-success">Enroll Now</button>
+                    </div>
+                    <div class="course-item">
+                        <h3>Business Management</h3>
+                        <p>Learn essential business operations and leadership</p>
+                        <span class="tag">60 hours</span>
+                        <button class="btn btn-success">Enroll Now</button>
+                    </div>
+                    <div class="course-item">
+                        <h3>Business Analysis</h3>
+                        <p>Develop analytical skills for business decision-making</p>
+                        <span class="tag">50 hours</span>
+                        <button class="btn btn-success">Enroll Now</button>
+                    </div>
+                    <div class="course-item">
+                        <h3>Project Management</h3>
+                        <p>Master project planning and execution</p>
+                        <span class="tag">45 hours</span>
+                        <button class="btn btn-success">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Opportunities Section -->
+            <div class="card" id="opportunitiesSection">
+                <h2>Business Opportunities</h2>
+                <div class="opportunity-list">
+                    <div class="opportunity-item">
+                        <h3>Job Listings</h3>
+                        <div class="tag">Full-time</div>
+                        <div class="tag">Part-time</div>
+                        <div class="tag">Freelance</div>
+                        <button class="btn">View Listings</button>
+                    </div>
+                    <div class="opportunity-item">
+                        <h3>Business Plan Templates</h3>
+                        <p>Access professional business planning resources</p>
+                        <button class="btn">Download Templates</button>
+                    </div>
+                    <div class="opportunity-item">
+                        <h3>Partnership Opportunities</h3>
+                        <p>Connect with potential business partners</p>
+                        <button class="btn">Explore Partnerships</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Resources Section -->
+            <div class="card" id="resourcesSection">
+                <h2>Financial Resources</h2>
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <h3>Funding Opportunities</h3>
+                        <p>Grants, investments, and funding programs</p>
+                        <button class="btn">View Opportunities</button>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Microfinance Options</h3>
+                        <p>Small business loans and credit facilities</p>
+                        <button class="btn">Apply Now</button>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Budgeting Tools</h3>
+                        <p>Financial planning and tracking resources</p>
+                        <button class="btn">Access Tools</button>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Emergency Assistance</h3>
+                        <p>Support programs and emergency funding</p>
+                        <button class="btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Forum Section -->
+            <div class="card" id="communitySection">
+                <h2>Community Forum</h2>
+                <div class="forum-section">
+                    <button class="btn" onclick="createNewPost()">New Discussion</button>
+                    <div class="forum-post">
+                        <h3>Q&A Session: Financial Planning</h3>
+                        <p>Join our expert panel this Friday</p>
+                        <div class="tag">Upcoming</div>
+                    </div>
+                    <div class="forum-post">
+                        <h3>Business Growth Strategies</h3>
+                        <p>Share your experiences and learn from others</p>
+                        <div class="tag">Active</div>
+                    </div>
+                    <div class="forum-post">
+                        <h3>Monthly Success Stories</h3>
+                        <p>Celebrate and learn from community achievements</p>
+                        <div class="tag">Featured</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
